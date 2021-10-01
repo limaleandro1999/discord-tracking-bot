@@ -7,10 +7,20 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "moment": "^2.29.1",
+    "prettier": "^2.4.1",
     "rastrojs": "^1.1.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "format": "prettier --write \"**/*.js\"",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.js\" --fix"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2"
   }
 }
